@@ -1,0 +1,310 @@
+#globalHeader {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: min(100dvw, var(--w-pc));
+  z-index: 100;
+
+  .inner {
+    display: flex;
+    align-items: center;
+    padding: 1.6rem;
+    width: 100%;
+
+    .logo {
+      a {
+        display: block;
+
+        img {
+          max-width: 4.2rem;
+        }
+      }
+    }
+    #js-btn-open-nav {
+      background-color: var(--c-primary);
+      border-radius: 99rem;
+      display: block;
+      height: 4.2rem;
+      width: 4.2rem;
+      margin-left: auto;
+      position: relative;
+
+      &::before,
+      &::after {
+        background-color: #ffffff;
+        content: "";
+        cursor: pointer;
+        display: block;
+        height: 0.2rem;
+        width: 60%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.4s;
+      }
+      &::before {
+        top: 40%;
+      }
+      &::after {
+        top: 60%;
+      }
+
+      &.is-active {
+        &::before {
+          transform: translate(-50%, -50%) rotate(45deg);
+          top: 50% !important;
+        }
+        &::after {
+          transform: translate(-50%, -50%) rotate(-45deg);
+          top: 50% !important;
+        }
+      }
+    }
+  }
+}
+
+#globalNav {
+  background-color: var(--bgc-primary);
+  height: 100dvh;
+  width: 100dvw;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.2s;
+  visibility: hidden;
+  z-index: 99;
+
+  &.is-active {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .inner {
+    margin: 0 auto;
+    max-height: 100dvh;
+    overflow: hidden auto;
+    padding: 9rem 1.6rem 1.6rem;
+    width: min(100%, var(--w-pc));
+
+    section {
+      &:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
+      > *:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+
+      .logo {
+        img {
+          max-width: 12rem;
+        }
+      }
+      .main-menu {
+        .main-menu-item {
+          a {
+            border-bottom: 0.1rem solid var(--c-gray);
+            font-weight: 700;
+            display: block;
+            padding: 1.6rem;
+            position: relative;
+            width: 100%;
+
+            &::before {
+              font-family: "Material Symbols Outlined";
+              font-weight: normal;
+              font-style: normal;
+              font-size: 1em;
+              display: inline-block;
+              line-height: 1;
+              text-transform: none;
+              letter-spacing: normal;
+              word-wrap: normal;
+              white-space: nowrap;
+              direction: ltr;
+
+              color: inherit;
+              content: "\e5e1";
+              position: absolute;
+              top: 50%;
+              right: 1.6rem;
+              transform: translate(0, -50%);
+            }
+          }
+        }
+      }
+      .sub-menu {
+        .sub-menu-item {
+          a {
+            display: block;
+            padding: 0.5em 1em;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.page {
+  .page-content {
+    header {
+      margin-bottom: -3.2rem;
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    main {
+      background-color: #ffffff;
+      border-top-left-radius: 1.6rem;
+      border-top-right-radius: 1.6rem;
+      padding-top: 4.8rem !important;
+      position: relative;
+
+      .page-title {
+        color: var(--c-primary);
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 3.2rem;
+        text-align: center;
+
+        span {
+          display: block;
+
+          &.en {
+            font-size: 2rem;
+            position: relative;
+
+            &::before,
+            &::after {
+              background-color: var(--c-primary);
+              content: "";
+              display: inline-block;
+              height: 0.2rem;
+              width: 5%;
+              transform: translate(0, calc(-0.4em + 0.1rem));
+              margin: 0 0.8rem;
+            }
+          }
+          &.ja {
+            font-size: 3.2rem;
+          }
+        }
+      }
+
+      section {
+        .sec-title {
+          color: var(--c-green) !important;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* list-news */
+.list-news {
+  .list-news-item {
+    a {
+      border-bottom: 0.1rem solid var(--c-gray);
+      display: block;
+      padding: 1.6rem;
+
+      .list-news-item-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.8rem;
+
+        .date {
+          color: var(--c-gray);
+          margin-left: auto;
+        }
+      }
+      .title {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+/* レスポンシブ */
+.pc {
+  display: none !important;
+}
+
+@media (min-width: 820px) {
+  .sp {
+    display: none !important;
+  }
+  .pc {
+    display: block !important;
+  }
+  #globalHeader {
+    display: none !important;
+  }
+  #globalNav {
+    height: 100dvh;
+    width: 32rem !important;
+    opacity: 1 !important;
+    top: 0;
+    left: 0;
+    visibility: visible !important;
+
+    .inner {
+      padding: 1.6rem !important;
+    }
+  }
+  .page {
+    position: relative;
+
+    &::before {
+      background-image: url("https://cis.hosei.ac.jp/wp-content/uploads/2024/04/gbc-header2024.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: "";
+      height: 100dvh;
+      width: 100dvw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -2;
+    }
+    &::after {
+      background-color: rgba(256, 256, 256, 0.3);
+      content: "";
+      display: block;
+      height: 100dvh;
+      width: 100dvw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .page-content {
+      margin: 0 auto 0 32rem !important;
+      box-shadow: 0 0 0.2rem #333333;
+    }
+  }
+}
+
+/* swiper */
+.swiper {
+  .swiper-button-prev,
+  .swiper-button-next {
+    &::after {
+      box-shadow: 0 0 0.1rem #333;
+      color: var(--c-primary);
+    }
+  }
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      background-color: var(--c-primary);
+    }
+  }
+}

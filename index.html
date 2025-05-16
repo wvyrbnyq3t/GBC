@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/root.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Google Fontsの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Material Icon -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- swiper.js -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <header id="globalHeader">
+      <div class="inner">
+        <div class="logo">
+          <a href="">
+            <img src="./assets/images/logo-gbc.png" alt="" />
+          </a>
+        </div>
+        <button type="button" id="js-btn-open-nav"></button>
+      </div>
+    </header>
+    <nav id="globalNav">
+      <div class="inner">
+        <section>
+          <a href="" class="logo pc">
+            <img src="./assets/images/logo-pc.png" alt="" />
+          </a>
+        </section>
+        <section>
+          <ul class="main-menu">
+            <li class="main-menu-item">
+              <a href="">GBCってなに？</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="">お知らせ</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="">レポート返却状況</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="">ラボナビ</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="">オンライ訪問</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <ul class="column-wrap">
+            <li class="column-item">
+              <a href="" class="btn-secondary bc-green c-green w-100"
+                >今後の予定</a
+              >
+            </li>
+            <li class="column-item">
+              <a href="" class="btn-secondary bc-green c-green w-100"
+                >オフィスアワー</a
+              >
+            </li>
+          </ul>
+        </section>
+        <section>
+          <ul class="sub-menu">
+            <li class="sub-menu-item">
+              <a href="">過去のイベント</a>
+            </li>
+            <li class="sub-menu-item">
+              <a href="">SAってなに？</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </nav>
+    <div class="page">
+      <div class="page-content">
+        <main>
+          <section>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./assets/images/banner/banner01.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/banner/banner02.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/banner/banner03.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </section>
+          <section>
+            <h2 class="sec-title">お知らせ</h2>
+            <ul class="list-news">
+              <li class="list-news-item">
+                <a href="">
+                  <div class="list-news-item-header">
+                    <p class="badge badge-small badge-secondary">カテゴリー</p>
+                    <p class="date">2025.01.01</p>
+                  </div>
+                  <p class="title">タイトルテキスト</p>
+                </a>
+              </li>
+              <li class="list-news-item">
+                <a href="">
+                  <div class="list-news-item-header">
+                    <p class="badge badge-small badge-secondary">カテゴリー</p>
+                    <p class="date">2025.01.01</p>
+                  </div>
+                  <p class="title">タイトルテキスト</p>
+                </a>
+              </li>
+              <li class="list-news-item">
+                <a href="">
+                  <div class="list-news-item-header">
+                    <p class="badge badge-small badge-secondary">カテゴリー</p>
+                    <p class="date">2025.01.01</p>
+                  </div>
+                  <p class="title">タイトルテキスト</p>
+                </a>
+              </li>
+              <li class="list-news-item">
+                <a href="">
+                  <div class="list-news-item-header">
+                    <p class="badge badge-small badge-secondary">カテゴリー</p>
+                    <p class="date">2025.01.01</p>
+                  </div>
+                  <p class="title">タイトルテキスト</p>
+                </a>
+              </li>
+              <li class="list-news-item">
+                <a href="">
+                  <div class="list-news-item-header">
+                    <p class="badge badge-small badge-secondary">カテゴリー</p>
+                    <p class="date">2025.01.01</p>
+                  </div>
+                  <p class="title">タイトルテキスト</p>
+                </a>
+              </li>
+            </ul>
+            <a href="" class="btn-secondary w-100">お知らせ一覧</a>
+          </section>
+          <section>
+            <h2 class="sec-title">今後の予定</h2>
+          </section>
+          <section>
+            <h2 class="sec-title">オフィスアワー</h2>
+          </section>
+          <section>
+            <h2 class="sec-title">GBCってどこにあるの</h2>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="./assets/js/script.js" defer></script>
+  </body>
+</html>
